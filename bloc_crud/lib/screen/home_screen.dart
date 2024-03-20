@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
 			appBar: AppBar(
 				title: Text(
-					'Welcome ${name?.toUpperCase()}'
+					'Hi ${name?.toUpperCase()}'
 				),
 				actions: [
 					IconButton(
@@ -29,6 +29,15 @@ class HomeScreen extends StatelessWidget {
 					)
 				],
 			),
+      body: Center(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Image.network('https://wallpapercave.com/wp/wp1842459.jpg',
+          fit: BoxFit.cover,
+          ),
+        ),
+      ),
 		);
   }
 }
